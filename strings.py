@@ -95,3 +95,4 @@ print("Name: {} Score: {}".format (student_name, score))
 print(f'Name: {student_name} Score: {score}')
 print(f'10 times 3 is {10*3}')
 
+# testing the connection
