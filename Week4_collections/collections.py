@@ -139,7 +139,7 @@ print(employees)
 print(employees.get('address'))
 print(employees.get('phone'))  # comes back with none
 print(employees.get('phone', 'Not found!'))
-'''
+
 
 # creating empty collection
 list1 = []
@@ -153,3 +153,60 @@ print(type(tuple2))
 set1 = set()
 print(type(set1))
 dict1 = {}
+'''
+
+# Accessing collection items
+list1 = [34, 43, 65, 7, [45, 56, 20, [1234, 233, 6578]], 4]
+print(list1[4][3][1])
+list1[2] = 99  # modifying a value - possible for lists and tuples
+list1.index(7)  # returns the position of a given value in the list
+# returns the position of first occurrence in case of duplicates
+
+# tuples also support indexing and slicing
+
+set1 = {34, 235, 32, 1}
+# print(set1[2])
+# set1[1] won't work because sets don't maintain order
+
+dict1 = {
+    'name': 'John',
+    'age': 25,
+    'address': {
+        'city': 'Boston',
+        'state': 'MA',
+        'zip': 12434
+    },
+    'skills': ['Java', 'SQL', 'PHP']
+}
+print(dict1['address']['state'])
+print(dict1['skills'][1])
+
+employee_details = [
+    {
+        'name': 'John',
+        'age': 25,
+        'address': {
+            'city': 'Boston',
+            'state': 'MA',
+            'zip': 12434
+        },
+        'skills': ['Java', 'SQL', 'PHP']
+    },
+
+    {
+        'name': 'Alex',
+        'age': 35,
+        'address': {
+            'city': 'NYC',
+            'state': 'NY',
+            'zip': 12434
+        },
+        'skills': ['Java', 'SQL', 'PHP']
+    }
+]
+
+
+# list and tuple to a set
+list2 = [343, 3, 5, 8, 10, 3]
+set2 = set(list2)
+print(set2)
