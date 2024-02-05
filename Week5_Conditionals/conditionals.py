@@ -56,7 +56,7 @@ if height > 120:
 
 else:
     print("Can't Ride")
-'''
+
 
 # grades question
 grade = int(input("Enter your number grade: "))
@@ -98,3 +98,34 @@ elif grade <= 100:
 
 else:
     print("Invalid Input")
+'''
+
+# Exercise
+# Ask user to enter a digit between 0 and 9
+# Return corresponding word
+# Ex: 1 is one
+
+number = int(input("Enter a value between 0 and 9: "))
+
+if number == 0:
+    print("Zero")
+elif number == 1:
+    print("One")
+elif number == 2:
+    print("Two")
+elif number == 3:
+    print("Three")
+elif number == 4:
+    print("Four")
+elif number == 5:
+    print("Five")
+elif number == 6:
+    print("Six")
+elif number == 7:
+    print("Seven")
+elif number == 8:
+    print("Eight")
+elif number == 9:
+    print("Nine")
+else:
+    print("Invalid Number")
