@@ -41,6 +41,67 @@ even = list2[0::2]
 
 list3 = [odd + even]
 print(list3)
-'''
 
-# Question 7
+
+# Question 7: Consider list1 = [34, 54, 67, 89, 11, 43, 94}. Write a program to:
+# a: remove the item present at index 4
+# b: add it to the 3rd position and at the end of the list
+
+list1 = [34, 54, 67, 89, 11, 43, 94]
+
+fourth = list1[4]
+list1.remove(fourth)
+length = len(list1)
+last = length + 1
+
+list1.insert(3, fourth)
+list1.insert(last, fourth)
+print(list1)
+
+
+
+# Question 8: Write a program to add item 7000 after 6000 in the following python list
+# list1 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40]
+
+list1 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40]
+
+list1[2][2].insert(2, 7000)
+print(list1)
+
+
+
+# Question 9: Extend list1 by adding the sub list list2
+# a. list1 = [“a”, “b”, [“c”, [“d”, “e”, [“f”, “g”], “k”], “l”], “m”, “n”]
+# b. list2 = [“h”, “i”, “j”]
+
+list1 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "l"], "m", "n"]
+list2 = ["h", "i", "j"]
+
+list1[2][1][2].extend(list2)
+print(list1)
+
+
+# Question 10: Reverse the given tuple
+# Tuple1 = (40, 19, 234, 12, 10, 123)
+tuple1 = (40, 19, 234, 12, 10, 123)
+print(tuple1)
+
+tuple2 = tuple1[::-1]
+print(tuple2)
+
+
+# Question 11: Print the value of key 'history' in the below dictionary
+dict1 = {
+    "course": {
+        "student": {
+            "name": "Mike",
+            "marks": {
+                "physics": 70,
+                "history": 80
+            }
+        }
+    }
+}
+
+print(dict1["course"]["student"]["marks"]["history"])
+'''
