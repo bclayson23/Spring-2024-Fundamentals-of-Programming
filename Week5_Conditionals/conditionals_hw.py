@@ -59,7 +59,7 @@ print("""
 ---.__(___)
 """)
 
-user_move = input("Pick a move: rock/paper/scissors") # simple rock paper scissors rules
+user_move = (input("Pick a move: rock/paper/scissors")).lower()  # simple rock paper scissors rules
 
 rand_num = round(random.random(), 2)  # this number generator will decide the computers choice
 comp_move = ""
@@ -117,16 +117,16 @@ else:
 
 print("Welcome to Treasure Island. Your mission is to find the treasure!")
 
-first_choice = input("To begin your adventure will you go left or right? ")  # if the user chooses the right option,
+first_choice = (input("To begin your adventure will you go left or right? ")).lower()  # if the user chooses the right option,
 # they will be able to continue
 if first_choice == "left":
     print("You head towards a big lake.")
 
-    second_choice = input("The waters seem rough, will you swim or wait? ")
-    if first_choice == "wait":
+    second_choice = (input("The waters seem rough, will you swim or wait? ")).lower()
+    if second_choice == "wait":
         print("You wait until the water dies down and swim across. You find three doors.")
 
-        last_choice = input("You see a red door, a blue door, and a yellow door. Which one will you enter? ")
+        last_choice = (input("You see a red door, a blue door, and a yellow door. Which one will you enter? ")).lower()
         if last_choice == "red":
             print("You have been burned by scolding fire. Game Over!")
         elif last_choice == "blue":
