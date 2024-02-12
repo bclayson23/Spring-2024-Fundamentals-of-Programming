@@ -19,7 +19,7 @@ dict1 = {
 }
 
 print(dict1.get(num))  #uses the index of the corresponding input
-
+'''
 
 # Question 2: Rock Paper Scissors
 import random
@@ -30,73 +30,83 @@ import random
 # Rock Paper Scissors ASCII Art
 
 # Rock
-print("""
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-""")
+user_choice = "yes"
 
-# Paper
-print("""
-     _______
----'    ____)____
-           ______)
-          _______)
-         _______)
----.__________)
-""")
+while user_choice.lower() == "yes":
+    print("""
+        _______
+    ---'   ____)
+          (_____)
+          (_____)
+          (____)
+    ---.__(___)
+    """)
 
-# Scissors
-print("""
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-""")
+    # Paper
+    print("""
+         _______
+    ---'    ____)____
+               ______)
+              _______)
+             _______)
+    ---.__________)
+    """)
 
-user_move = (input("Pick a move: rock/paper/scissors")).lower()  # simple rock paper scissors rules
+    # Scissors
+    print("""
+        _______
+    ---'   ____)____
+              ______)
+           __________)
+          (____)
+    ---.__(___)
+    """)
 
-rand_num = round(random.random(), 2)  # this number generator will decide the computers choice
-comp_move = ""
+    user_move = (input("Pick a move: rock/paper/scissors")).lower()  # simple rock paper scissors rules
 
-if 0 <= rand_num < 1 / 3:
-    comp_move = "rock"
-elif 1 / 3 <= rand_num < 2/3:
-    comp_move = "paper"
-else:
-    comp_move = "scissors"
+    rand_num = round(random.random(), 2)  # this number generator will decide the computers choice
+    comp_move = ""
 
-result = ""
 
-if user_move == comp_move:
-    result = "Tie."
-elif user_move == "rock":
-    if comp_move == "paper":
-        result = "You Lose."
+
+    if 0 <= rand_num < 1 / 3:
+        comp_move = "rock"
+    elif 1 / 3 <= rand_num < 2/3:
+        comp_move = "paper"
     else:
-        result = "You Win."
-elif user_move == "paper":
-    if comp_move == "rock":
-        result = "You Win."
+        comp_move = "scissors"
+
+    result = ""
+
+    if user_move == comp_move:
+        result = "Tie."
+    elif user_move == "rock":
+        if comp_move == "paper":
+            result = "You Lose."
+        else:
+            result = "You Win."
+    elif user_move == "paper":
+        if comp_move == "rock":
+            result = "You Win."
+        else:
+            result = "You Lose."
+    elif user_move == "scissors":
+        if comp_move == "rock":
+            result = "You Lose."
+        else:
+            result = "You Win."
     else:
-        result = "You Lose."
-elif user_move == "scissors":
-    if comp_move == "rock":
-        result = "You Lose."
-    else:
-        result = "You Win."
-else:
-    print("Invalid Input")
+        print("Invalid Input")
 
 
-print(f"You Picked {user_move}. Computer Picked {comp_move}. {result}")  # gives the user results
+    print(f"You Picked {user_move}. Computer Picked {comp_move}. {result}")  # gives the user results
+    user_choice = input("Do you want to continue? Enter yes or no: ")
+
+print("Thank you!")
 
 
+
+'''
 # Question 3: Write a program that takes year as input and checks whether the given year is leap or not.
 
 year = int(input("Please enter a year: "))
