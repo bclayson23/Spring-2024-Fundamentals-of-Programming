@@ -35,5 +35,11 @@ print("End")
 
 numbers = [1, 2, 3, 0, 4, 5]
 for num in numbers:
-    result = 10/num
-    print(result)
+    try:
+        result = 10 / num
+    except ZeroDivisionError as e:
+        print("Error:", e)
+    except Exception as e:
+        print("Something went wrong.")
+    else:
+        print(result)
