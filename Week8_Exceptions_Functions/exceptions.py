@@ -13,7 +13,7 @@ try:
 except Exception:
     print("cannot divide by zero")
 print("bye")
-"""
+
 try:
     a = int(input("Enter first number: "))
     b = int(input("Enter second number: "))
@@ -31,3 +31,9 @@ finally:
     print("Connection closed")
 
 print("End")
+"""
+
+numbers = [1, 2, 3, 0, 4, 5]
+for num in numbers:
+    result = 10/num
+    print(result)
