@@ -60,7 +60,7 @@ except ZeroDivisionError as e:  # cant divide by zero
     print(e)
 
 finally:
-    print(f"Hello {name}! You are {age} years old and you can buy {amount} products!")  # printing result
+    print(f"Hello {name}! You are {age} years old, and you can buy {amount} products!")  # printing result
 
 
 
