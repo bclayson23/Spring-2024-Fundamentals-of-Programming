@@ -1,13 +1,15 @@
 import random  # importing the random module
 from hangman_ascii import stages, logo  # im[porting ascii art
-from words import words  # importing the words
+from words import words, words_alpha  # importing the words
 
 # Take a list with sample words
 # words1 = ["sunrise", "mountain", "forest", "beach"]
+
+# Debugging, with breakpoints, program stops at point
 play_again = "yes"  # to play again
 while play_again in ["yes", "y"]:  # setting to play
     # Choose a random word
-    chosen_word = random.choice(words)  # calling for words
+    chosen_word = random.choice(words_alpha)  # calling for words
     len_chosen_word = len(chosen_word)  # finding word length
     # print(chosen_word)
     print(logo)  # printing the logo
